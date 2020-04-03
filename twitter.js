@@ -58,7 +58,7 @@ Twitter.prototype.getAccessToken = function(requestToken, requestTokenSecret, oa
 };
 
 Twitter.prototype.verifyCredentials = function(accessToken, accessTokenSecret, params, callback) {
-	var url = baseUrl + "account/verify_credentials.json";
+	var url = baseUrl + "account/verify_credentials.json?include_email=true";
 	if (typeof params == "function") {
 		callback = params;
 	} else {
